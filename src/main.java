@@ -9,8 +9,16 @@ public class main {
     public static void main(String[] args) {
 
         JLabel label = new JLabel();
-        label.setText("This is the label");
 
+        label.setLayout(null);
+        label.setLocation(55, 55);
+
+
+        JLabel label2 = new JLabel();
+        label2.setLayout(null);
+        label2.setLocation(300,300);
+
+        ImageIcon player = new ImageIcon("src/testspritetransparent.png");
         ImageIcon ball = new ImageIcon("src/Ball.png");
 
         Image image = ball.getImage(); // transform it
@@ -18,7 +26,10 @@ public class main {
         ball = new ImageIcon(newimg);  // transform it back
 
 
-        label.setIcon(ball);
+        label.setIcon(player);
+        label2.setIcon(ball);
+
+
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500,500);
